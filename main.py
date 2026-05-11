@@ -272,7 +272,7 @@ def main():
     enc = sub.add_parser("encode", help="encode a file into a lossless WebM video")
     enc.add_argument("file", help="source file to encode")
     enc.add_argument(
-        "--block-size", type=int, default=1, metavar="N",
+        "--block-size", type=int, default=8, metavar="N",
         help="encode each bit as an N×N pixel block (≥8 resists H.264/VP9 lossy re-encoding)",
     )
     enc.add_argument(
@@ -283,7 +283,7 @@ def main():
     dec = sub.add_parser("decode", help="decode a WebM video back to the original file")
     dec.add_argument("file", help=".webm file to decode")
     dec.add_argument(
-        "--block-size", type=int, default=1, metavar="N",
+        "--block-size", type=int, default=8, metavar="N",
         help="block size used during encoding",
     )
 

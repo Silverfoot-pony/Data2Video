@@ -27,7 +27,7 @@ python main.py decode <file.webm> [--block-size N]
 
 | Option | Default | Description |
 |---|---|---|
-| `--block-size N` | `1` | Encode each bit as an N×N pixel block. Use ≥ 8 when the video will be re-encoded by a lossy platform (YouTube, etc.) |
+| `--block-size N` | `8` | Encode each bit as an N×N pixel block. Use ≥ 8 when the video will be re-encoded by a lossy platform (YouTube, etc.) |
 | `--resolution` | `4k` | Frame resolution — `4k` (3840×2160) or `hd` (1920×1080) |
 
 > **Important:** the same `--block-size` must be passed to both `encode` and `decode`.
